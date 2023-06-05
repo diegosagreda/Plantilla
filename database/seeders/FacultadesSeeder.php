@@ -14,6 +14,17 @@ class FacultadesSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $datos = [
+            [
+                'codfacultad' => '10',
+                'nomfacultad' => 'Artes'
+            ],
+            [   
+                'codfacultad' => '11',
+                'nomfacultad' => 'Ingenieria'
+            ],
+            
+
+        ];    
     }
 }
