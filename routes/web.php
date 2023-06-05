@@ -18,6 +18,7 @@ Route::get('/dashboard', [HomeController::class, 'index']);
 Route::get('/facultades/listado', [FacultadesController::class, 'index'])->name('facultades.listado');
 Route::get('/facultades/create', [FacultadesController::class, 'create'])->name('facultades.create');
 Route::post('/facultades/store', [FacultadesController::class, 'store'])->name('facultades.store');
+Route::delete('/facultades/destroy/{codfacultad}', [FacultadesController::class, 'destroy'])->name('facultades.destroy');
 Route::get('/programas/listado', [Programas::class, 'index']);
 Route::get('/estudiantes/listado', [Estudiantes::class, 'index']);
 Route::get('/profesores/listado', [Profesores::class, 'index']);

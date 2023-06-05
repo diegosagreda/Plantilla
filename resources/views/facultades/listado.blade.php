@@ -29,7 +29,11 @@
           <td>{{$facultad->nomfacultad}}</td>
           <td>
             <button class="btn btn-primary">Editar</button>
-            <button class="btn btn-danger">Eliminar</button>
+            <form method="POST" action="{{ route('facultades.destroy',$facultad->codfacultad) }}">
+                @csrf
+                @method('DELETE')
+                <input type="submit" class="dropdown-item text-danger" value="Eliminar" />
+            </form>
           </td>
         </tr>
 

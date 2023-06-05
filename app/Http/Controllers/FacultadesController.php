@@ -21,4 +21,10 @@ class FacultadesController extends Controller
         $facultad->save();
         return redirect()->route('facultades.listado');
     }
+    public function destroy(Request $request) {
+        $facultad = $request->codfacultad;
+        Facultades::where('codfacultad', $facultad)->delete();
+
+        return redirect()->route('facultades.listado');
+    }
 }
