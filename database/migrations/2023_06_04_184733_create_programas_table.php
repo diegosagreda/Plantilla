@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('programas', function (Blueprint $table) {
             $table->string('codprograma')->primary()->unique();
             $table->string('nomprograma');
-            $table->string('facultad');
-            $table->foreign('facultad')->references('codfacultad')->on('facultades')->onDelete('cascade');
+            $table->string('facultad_codfacultad');
+            $table->foreign('facultad_codfacultad')->references('codfacultad')->on('facultades')->onDelete('cascade');
             $table->timestamps();
         });
     }

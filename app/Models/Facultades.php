@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Facultades extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'codfacultad';
+    protected $guarded= [];
 }

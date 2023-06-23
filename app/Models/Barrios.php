@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Barrios extends Model
 {
     use HasFactory;
+
+    protected $primaryKey = 'codbarrio';
+    protected $guarded= [];
+
+    public function estudiante()
+    {
+        return $this->hasOne(Estudiantes::class);
+    }
 }

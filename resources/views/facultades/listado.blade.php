@@ -12,7 +12,6 @@
 
 
   <div class="container">
-    <h2>Ejemplo de tabla con Bootstrap</h2>
     <a class="btn btn-primary" href="/facultades/create">Nuevo</a>
     <table class="table">
       <thead>
@@ -28,11 +27,12 @@
           <td>{{$facultad->codfacultad}}</td>
           <td>{{$facultad->nomfacultad}}</td>
           <td>
-            <button class="btn btn-primary">Editar</button>
+
+            <a class="btn btn-primary" href="{{route('facultades.edit',$facultad->codfacultad)}}">Editar</a>
             <form method="POST" action="{{ route('facultades.destroy',$facultad->codfacultad) }}">
                 @csrf
                 @method('DELETE')
-                <input type="submit" class="dropdown-item text-danger" value="Eliminar" />
+                <input type="submit" class="btn btn-danger" value="Eliminar" />
             </form>
           </td>
         </tr>

@@ -20,13 +20,13 @@ return new class extends Migration
             $table->date('fechestudiante');
             $table->string('sexestudiante');
 
-            $table->string('ciudad');
-            $table->string('barrio');
-            $table->string('programa');
-            
-            $table->foreign('ciudad')->references('codciudad')->on('ciudades')->onDelete('cascade');
-            $table->foreign('barrio')->references('codbarrio')->on('barrios')->onDelete('cascade');
-            $table->foreign('programa')->references('codprograma')->on('programas')->onDelete('cascade');
+            $table->string('ciudad_codciudad');
+            $table->string('barrio_codbarrio');
+            $table->string('programa_codprograma');
+
+            $table->foreign('ciudad_codciudad')->references('codciudad')->on('ciudades')->onDelete('cascade');
+            $table->foreign('barrio_codbarrio')->references('codbarrio')->on('barrios')->onDelete('cascade');
+            $table->foreign('programa_codprograma')->references('codprograma')->on('programas')->onDelete('cascade');
             $table->timestamps();
         });
     }
